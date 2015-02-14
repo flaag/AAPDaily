@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>AAP Updates</title>
+<link rel="stylesheet" type="text/css" href="inc/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/dcsns_wall.css" media="all" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
+<script type="text/javascript" src="inc/js/jquery.site.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.wall.1.6.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.1.5.9.min.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="all" />
+
+<script type="text/javascript">
+jQuery(window).load(function(){
+	jQuery(".dcsns-youtube .section-thumb a").click(function() {
+    jQuery.fancybox({
+            'padding'       : 0,
+            'autoScale'     : false,
+            'transitionIn'  : 'none',
+            'transitionOut' : 'none',
+            'title'         : this.title,
+            'width'     : 680,
+            'height'        : 495,
+            'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            'type'          : 'swf',
+            'swf'           : {
+                 'wmode'        : 'transparent',
+                'allowfullscreen'   : 'true'
+            }
+        });
+
+    return false;
+	});
+ });
+	
+</script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$('#social-stream').dcSocialStream({
+		feeds: {
+			twitter: {
+				id: 'ArvindKejriwal,AamAadmiParty, DrKumarVishwas, msisodia, AashishKhetan, AtishiMarlena, raghav_chadha, ashutosh83B, SanjayAzadSln,AapYogendra',
+				thumb: true,
+                images:'large',
+                retweets: true,
+                replies: true
+			},
+			facebook: {
+				id: '290805814352519,Facebook Timeline/290805814352519, 347939248636912, Facebook Timeline/347939248636912',
+				out: 'intro,thumb,text,user,share'
+			},
+			google: {
+				id: '102917260213312355919',
+				api_key: 'AIzaSyDilTOB3al-MRuSdsfaVaFZj_ENbinWnpI'
+			},
+			youtube: {
+				id: 'aamaadmiparty',
+				thumb: '0'
+			}
+		},
+		rotate: {
+			delay: 0
+		},
+		twitterId: 'designchemical',
+		control: false,
+		filter: true,
+		wall: true,
+		cache: false,
+		max: 'days',
+		days: 25,
+		iconPath: 'images/dcsns-dark/',
+		imagePath: 'images/dcsns-dark/'
+	});
+				 
+});
+</script>
+<style>
+#wall {padding: 10px 0 0; min-height: 2000px;}
+</style>
+</head>
+
+<body>
+<!-- Begin Second Wrapper -->
+
+<div id="wrapper">
+ 
+  <div id="container"> 
+  <!-- Begin Question Block -->
+<!--
+  <div class="opacity pad-btm">
+	<div id="banner">
+		<a href="http://www.designchemical.com/blog/index.php/premium-jquery-plugins/jquery-social-media-tabs-plugin/"><img src="inc/images/banner.png" alt="" /></a>
+		
+	</div>
+	
+	</div>
+	-->
+	
+	
+<h3>Social Network Wall Demo</h3>
+<div id="wall">
+	
+	 <div id="social-stream"></div>
+
+<div class="clear" style="margin-bottom: 20px;"></div>
+
+
+</div>
+
+  
+<!--  <div id="copyright">
+	jQuery Social Stream plugin was created by <a href="http://www.designchemical.com">Design Chemical</a>.
+  </div> -->
+</div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>
